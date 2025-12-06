@@ -253,36 +253,29 @@ a {
    VIDEO
    =========================== */
 .video-container {
-  max-width: 1100px; /* Mismo ancho máximo que el banner */
-  margin: 0 auto 3rem auto;
-  padding: 0 1rem;
-  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
 }
 
-/* 🎥 Nuevo contenedor para la proporción 16:9 */
 .video-responsive {
-    position: relative;
-    padding-bottom: 56.25%; /* Altura calculada para 16:9 (9/16) */
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 20px;
-    max-width: 100%; /* Asegura que no exceda el ancho del padre */
-    margin: 0 auto; /* Centra el contenedor si el padre es más grande que 1100px */
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 56.25%) */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* El iframe ocupa todo el espacio del contenedor responsive */
 .video-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    box-shadow: none;
-    border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
 }
-
-
 /* ===========================
    FOOTER
    =========================== */
