@@ -74,12 +74,12 @@ a {
 }
 
 /* ===========================
-   GRID DE SERVICIOS
+   GRID DE SERVICIOS - CORREGIDO ✅
    =========================== */
 .grid-servicios {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.2rem; /* Reducido el espacio entre cards */
+  grid-template-columns: 1fr; /* 1 columna en móvil */
+  gap: 1.5rem;
   max-width: 1100px;
   margin: 0 auto 3rem auto;
   padding: 0 1rem;
@@ -100,11 +100,11 @@ a {
 }
 
 /* ===========================
-   CARDS DE SERVICIOS
+   CARDS DE SERVICIOS - MEJORADAS ✅
    =========================== */
 .card-servicio {
   width: 100%;
-  max-width: 280px; /* Ancho óptimo para 3 columnas */
+  max-width: 100%; /* Ocupa todo el ancho en móvil */
   margin: 0 auto;
   background: linear-gradient(
     135deg,
@@ -121,7 +121,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 250px; /* Altura mínima para consistencia */
+  min-height: 250px;
+}
+
+@media (min-width: 768px) {
+  .card-servicio {
+    max-width: 280px; /* Tamaño controlado en tablets y desktop */
+  }
 }
 
 .card-servicio:hover {
@@ -151,29 +157,29 @@ a {
 }
 
 /* ===========================
-   BANNER CON CARRUSEL
+   BANNER CON CARRUSEL - OPTIMIZADO ✅
    =========================== */
 .banner-container {
   position: relative;
   width: 100%;
   max-width: 1100px;
-  height: 250px;
+  height: 180px; /* Altura más proporcional en móvil */
   margin: 2rem auto 0.5rem auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: none; /* Sin sombra para que pase desapercibido */
-  background-color: transparent; /* Fondo transparente */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
 @media (min-width: 768px) {
   .banner-container {
-    height: 320px;
+    height: 280px; /* Más proporcional */
   }
 }
 
 @media (min-width: 1024px) {
   .banner-container {
-    height: 380px;
+    height: 350px; /* Proporción similar al video */
   }
 }
 
@@ -183,10 +189,10 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: contain; /* Muestra la imagen completa */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: rgba(219, 234, 254, 0.1); /* Mucha más transparencia */
+  background-color: rgba(219, 234, 254, 0.1);
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -204,7 +210,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 0.8rem auto 3rem auto; /* Más cerca del banner */
+  margin: 0.8rem auto 3rem auto;
   max-width: 1100px;
   padding: 0 1rem;
 }
@@ -250,7 +256,7 @@ a {
 }
 
 /* ===========================
-   VIDEO - CORREGIDO ✅
+   VIDEO
    =========================== */
 .video-container {
   max-width: 1100px;
@@ -260,7 +266,7 @@ a {
 
 .video-responsive {
   position: relative;
-  padding-bottom: 56.25%; /* Proporción 16:9 (9/16 = 56.25%) */
+  padding-bottom: 56.25%; /* Proporción 16:9 */
   height: 0;
   overflow: hidden;
   border-radius: 12px;
